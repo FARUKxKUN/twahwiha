@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette adopted from buckssauce.com tokens */
+  --color-bg: #100B06;
+  --color-bg-2: #1A1109;
+  --color-cream: #F4ECCF;
+  --color-accent: #F15728;
+  --color-red: #DA1F27;
+  --color-brown: #593A2C;
+  --color-muted: #8A7E6E;
+  /* per-flavor moods */
+  --color-original: #1A0A06;
+  --color-toum: #0E160B;
+  --color-asla: #1A130A;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #100B06;
+  color: #F4ECCF;
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Consistent page gutter / max width — the layout discipline */
+.shell {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .shell { padding-inline: 3rem; }
+}
+
+button:not(:disabled),
+[role="button"]:not(:disabled) { cursor: pointer; }
+
+section[id] { scroll-margin-top: 5rem; }
+
+/* Hide native cursor on desktop so the fire cursor reads cleanly */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, [data-cursor], input, textarea, select { cursor: none; }
+
+  .cursor-dot {
+    position: fixed; top: 0; left: 0;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #F4ECCF;
+    translate: -50% -50%;
+    pointer-events: none;
+    z-index: 10001;
+    mix-blend-mode: difference;
+  }
+  /* hover-only action label — sits above the cursor, never sticks */
+  .cursor-label {
+    position: fixed; top: 0; left: 0;
+    translate: -50% -180%;
+    pointer-events: none;
+    z-index: 10001;
+    background: #F15728; color: #100B06;
+    padding: 6px 13px; border-radius: 999px;
+    font-family: var(--font-space-mono), monospace;
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em; white-space: nowrap;
+    opacity: 0; scale: 0.6;
+    transform-origin: 50% 130%;
+  }
+}
+
+::selection { background: #F15728; color: #F4ECCF; }
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+/* Outlined CTA button — border + matching text, fills on hover */
+.btn-outline {
+  border: 2px solid var(--btn, #F15728);
+  color: var(--btn, #F15728);
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline:hover {
+  background: var(--btn, #F15728);
+  color: #100B06;
+}
+
+/* Floating decoration (scattered ingredients) */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50%      { transform: translateY(-16px) rotate(var(--r, 0deg)); }
+}
+.floaty { animation: floaty 6s ease-in-out infinite; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .floaty { animation: none; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
