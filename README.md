@@ -1,6 +1,7 @@
 # TWAHWIHA
 
 [![Live site](https://img.shields.io/badge/live-twahwiha.vercel.app-e2643a?style=flat)](https://twahwiha.vercel.app)
+[![CI](https://github.com/FARUKxKUN/twahwiha/actions/workflows/ci.yml/badge.svg)](https://github.com/FARUKxKUN/twahwiha/actions/workflows/ci.yml)
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=flat&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![GSAP](https://img.shields.io/badge/GSAP-0AE448?style=flat&logo=greensock&logoColor=black)
