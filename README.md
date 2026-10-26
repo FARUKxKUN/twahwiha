@@ -1,5 +1,11 @@
 # TWAHWIHA
 
+[![Live site](https://img.shields.io/badge/live-twahwiha.vercel.app-e2643a?style=flat)](https://twahwiha.vercel.app)
+![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=flat&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-0AE448?style=flat&logo=greensock&logoColor=black)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+
 Scroll-driven showcase site for TWAHWIHA, a fictional Tunisian hot sauce brand.
 
 **Live:** [twahwiha.vercel.app](https://twahwiha.vercel.app)
@@ -41,3 +47,11 @@ npm run dev
 ```
 
 Open http://localhost:3000.
+
+## My role
+
+Solo project: concept, design and development.
+
+## License
+
+No license is granted. All rights reserved by Farouk Battikh.
